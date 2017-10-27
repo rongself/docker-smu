@@ -1,9 +1,12 @@
 FROM alpine:3.5
 
+ARG KCPTUN_VERSION=123456
+ENV KCPTUN_VERSION=${KCPTUN_VERSION}
+
 RUN apk add --no-cache wget openssl ca-certificates && update-ca-certificates \
-    && wget https://github.com/xtaci/kcptun/releases/download/v20171021/kcptun-linux-amd64-20171021.tar.gz \
+    && wget https://github.com/xtaci/kcptun/releases/download/v${KCPTUN_VERSION}/kcptun-linux-amd64-${KCPTUN_VERSION}.tar.gz \
     && mkdir /root/kcptun \
-    && tar -zxvf kcptun-linux-amd64-20171021.tar.gz -C /root/kcptun 
+    && tar -zxvf kcptun-linux-amd64-${KCPTUN_VERSION}.tar.gz -C /root/kcptun 
 
 WORKDIR /root/kcptun/
 

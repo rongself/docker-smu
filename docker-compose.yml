@@ -6,6 +6,7 @@ services:
         args: 
           - KCPTUN_PASSWORD=${KCPTUN_PASSWORD}
           - KCPTUN_TARGET=${KCPTUN_TARGET}
+          - KCPTUN_VERSION=${KCPTUN_VERSION}
       ports:
         - "${KCPTUN_EXPORT_PORT}:8088/udp"
       depends_on:
