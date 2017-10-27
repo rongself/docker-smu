@@ -7,7 +7,7 @@ services:
           - KCPTUN_PASSWORD=${KCPTUN_PASSWORD}
           - KCPTUN_TARGET=${KCPTUN_TARGET}
       ports:
-        - "${KCPTUN_EXPORT_PORT}:8088"
+        - "${KCPTUN_EXPORT_PORT}:8088/udp"
       depends_on:
         - shadowsocks
     shadowsocks:
