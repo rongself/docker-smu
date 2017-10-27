@@ -1,0 +1,35 @@
+version: '2'
+services:
+    kcptun:
+      build:
+        context: ./kcptun
+        args: 
+          - KCPTUN_PASSWORD=${KCPTUN_PASSWORD}
+          - KCPTUN_TARGET=${KCPTUN_TARGET}
+      ports:
+        - "${KCPTUN_EXPORT_PORT}:8088"
+      depends_on:
+        - shadowsocks
+    shadowsocks:
+      build:
+        context: ./shadowsocks
+        args:
+          - SSMGR_PASSWORD=${SSMGR_PASSWORD}
+          - SS_PORT_RANGE=${SS_PORT_RANGE}
+      ports:
+        - "6001:6001"
+        - "4001:4001"
+        - "${SS_PORT_RANGE}:${SS_PORT_RANGE}"
+    ssmgr:
+      build:
+        context: ./ssmgr
+        args:
+          - SSMGR_PASSWORD=${SSMGR_PASSWORD}
+          - SMTP_HOST=${SMTP_HOST}
+          - SMTP_USERNAME=${SMTP_USERNAME}
+          - SMTP_PASSWORD=${SMTP_PASSWORD}
+      depends_on:
+        - shadowsocks
+      ports:
+        - "${SSMGR_EXPORT_PORT}:6002"
+
