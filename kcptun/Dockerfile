@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-ARG KCPTUN_VERSION=123456
+ARG KCPTUN_VERSION=20170322
 ENV KCPTUN_VERSION=${KCPTUN_VERSION}
 
 RUN apk add --no-cache wget openssl ca-certificates && update-ca-certificates \
