@@ -4,7 +4,7 @@ RUN apk add --no-cache wget openssl ca-certificates && update-ca-certificates \
     && wget https://github.com/xtaci/kcptun/releases/download/v20171021/kcptun-linux-amd64-20171021.tar.gz \
     && mkdir /root/kcptun \
     && tar -zxvf kcptun-linux-amd64-20171021.tar.gz -C /root/kcptun 
-COPY ./config/kcptun-server.json /root/kcptun
+
 WORKDIR /root/kcptun/
 
 ARG KCPTUN_PASSWORD=123456
