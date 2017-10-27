@@ -1,9 +1,10 @@
 # docker-smu
+用dock-compose一键搭建神秘的多用户平台:)
 
 ## 使用
 
 1. 安装好docker(>=17.x)和docker-compose(>=1.16)
-2. 添加编辑配置文件
+2. 添加编辑配置文件
 ```
 git clone https://github.com/rongself/docker-smu.git
 cd docker-cum
