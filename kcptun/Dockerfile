@@ -25,4 +25,4 @@ ENTRYPOINT ./server_linux_amd64 \
             --datashard 30 \
             --parityshard 15 \
             --nocomp false
-EXPOSE 8088
+EXPOSE 8088/udp
