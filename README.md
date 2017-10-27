@@ -1,5 +1,5 @@
 # docker-smu
-用dock-compose一键搭建神秘的多用户平台:)
+用dock-compose一键搭建神秘的多用户平台:)
 
 ## 使用
 
