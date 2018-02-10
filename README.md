@@ -7,7 +7,7 @@
 2. 添加编辑配置文件
 ```
 git clone https://github.com/rongself/docker-smu.git
-cd docker-cum
+cd docker-smu
 cp .env.example .env
 ```
 3. 编辑配置,填写好邮箱smtp设置,其他根据需求自行改动
