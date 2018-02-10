@@ -25,6 +25,6 @@ SMTP_PASSWORD=密码 #注意:126邮箱不是用密码,而是要到设置里设�
 docker-compose up
 ```
 
-5. 访问http://[你的ip或域名]:[默认6002端口]
+5. 访问http://[你的ip或域名]:[默认6002端口],注册账号,默认第一个注册的就是超级管理员
 
 这个平台的使用方法参考官方文档:[https://github.com/shadowsocks/shadowsocks-manager/wiki/WebGUI](https://github.com/shadowsocks/shadowsocks-manager/wiki/WebGUI)
