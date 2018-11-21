@@ -1,6 +1,7 @@
 version: '2'
 services:
     kcptun:
+      restart: always
       build:
         context: ./kcptun
         args: 
@@ -22,6 +23,7 @@ services:
         - "4001:4001"
         - "${SS_PORT_RANGE}:${SS_PORT_RANGE}"
     ssmgr:
+      restart: always
       build:
         context: ./ssmgr
         args:
