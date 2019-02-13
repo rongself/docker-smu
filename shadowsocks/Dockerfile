@@ -1,9 +1,8 @@
-FROM alpine:3.5
+FROM alpine:3.9
 
-RUN apk add --no-cache py-pip \
-        && pip install shadowsocks
-RUN apk add --no-cache nodejs
-RUN npm update && npm i -g shadowsocks-manager
+RUN apk add --no-cache py-pip git \
+        && pip install -U git+https://github.com/shadowsocks/shadowsocks.git@master
+RUN apk update && apk add --no-cache nodejs-npm &&  npm update && npm i --unsafe-perm -g shadowsocks-manager
 
 ARG SSMGR_PASSWORD=123456
 ENV SSMGR_PASSWORD=${SSMGR_PASSWORD}

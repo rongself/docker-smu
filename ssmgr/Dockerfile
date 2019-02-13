@@ -1,7 +1,6 @@
-FROM alpine:3.5
+FROM alpine:3.9
 
-RUN apk add --no-cache nodejs
-RUN npm update && npm i -g shadowsocks-manager
+RUN apk update && apk add --no-cache nodejs-npm && npm update && npm i --unsafe-perm -g shadowsocks-manager
 
 ARG SSMGR_PASSWORD=123456
 ENV SSMGR_PASSWORD=${SSMGR_PASSWORD}

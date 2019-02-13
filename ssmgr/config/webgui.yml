@@ -46,3 +46,7 @@ plugins:
     client_secret: 'EP40s6pQAZmqp_G_nrU9kKY4XaZph'
 
 db: 'webgui.sqlite'
+redis:
+  host: 'redis'
+  port: 6379
+  db: 0

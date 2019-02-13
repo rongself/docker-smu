@@ -33,6 +33,8 @@ services:
           - SMTP_PASSWORD=${SMTP_PASSWORD}
       depends_on:
         - shadowsocks
+        - redis
       ports:
         - "${SSMGR_EXPORT_PORT}:6002"
-
+    redis:
+      build: ./redis
